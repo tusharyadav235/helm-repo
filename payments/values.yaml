@@ -2,8 +2,15 @@ image:
   repository: busybox
   tag: latest
   pullPolicy: IfNotPresent
+
 service:
   type: ClusterIP
-  port: 80  
-appMessage: "Shipping Service"
-  
+  port: 80
+
+serviceAccount:
+  create: true
+  annotations: {}
+  automount: true
+  name: ""
+
+appMessage: "Shipping Service" 
